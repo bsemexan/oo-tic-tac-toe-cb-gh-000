@@ -1,5 +1,5 @@
 class TicTacToe
-  initialize(board = nil)
+  def initialize(board = nil)
    @board = board || Array.new(9, " ")
  end
   # Define your WIN_COMBINATIONS constant
