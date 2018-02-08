@@ -1,7 +1,7 @@
 class TicTacToe
   def initialize(board = nil)
    @board = board || Array.new(9, " ")
- end
+  end
   # Define your WIN_COMBINATIONS constant
 WIN_COMBINATIONS = [
   [0,1,2], # Top row
