@@ -32,12 +32,12 @@ class TicTacToe
 
   # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
   def position_taken?(board, index)
-    board[index] == "X" || board[index] == "O" ? true : false
+    @board[index] == "X" || @board[index] == "O" ? true : false
   end
 
   # code your #valid_move? method here
   def valid_move?(board, index)
-    !position_taken?(board, index) && index.between?(0, 8) ? true : false
+    !position_taken?(@board, index) && index.between?(0, 8) ? true : false
   end
 
   def turn(board)
@@ -54,7 +54,7 @@ class TicTacToe
 
   def turn_count(board)
     i = 0
-    board.each do |boards|
+    @board.each do |boards|
       i += 1 if boards != " "
     end
     i
@@ -66,14 +66,14 @@ class TicTacToe
 
   def won?(board)
     WIN_COMBINATIONS.detect do |combo|
-       board[combo[0]] == board[combo[1]] &&
-       board[combo[1]] == board[combo[2]] &&
+       @board[combo[0]] == @board[combo[1]] &&
+       @board[combo[1]] == @board[combo[2]] &&
        position_taken?(board, combo[0])
      end
   end
 
   def full?(board)
-    !board.include?(" ")
+    !@board.include?(" ")
   end
 
   def draw?(board)
@@ -86,7 +86,7 @@ class TicTacToe
 
   def winner(board)
     if won?(board)
-      board[won?(board)[0]]
+      @board[won?(board)[0]]
     end
   end
 
