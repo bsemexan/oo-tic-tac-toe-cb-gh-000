@@ -45,7 +45,7 @@ class TicTacToe
     else
       move(index, current_player(board))
     end
-    display_board(board)
+    display_board
   end
 
   def turn_count(board)
