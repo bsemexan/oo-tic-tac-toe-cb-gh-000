@@ -80,8 +80,8 @@ class TicTacToe
     !won? && full?
   end
 
-  def over?(board)
-    full?(board) || won?(board) || draw?(board)
+  def over?
+    full? || won? || draw?
   end
 
   def winner(board)
