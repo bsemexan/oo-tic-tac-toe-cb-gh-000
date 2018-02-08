@@ -22,8 +22,8 @@ class TicTacToe
     input.to_i - 1
   end
 
-  def move(array, index, value)
-    @array[index] = value
+  def move(index, value)
+    @board[index] = value
   end
 
   # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
