@@ -48,7 +48,7 @@ class TicTacToe
     display_board
   end
 
-  def turn_count(board)
+  def turn_count
     i = 0
     @board.each do |boards|
       i += 1 if boards != " "
